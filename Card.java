@@ -1,4 +1,4 @@
-//import java.util.Scanner;
+// import java.util.Scanner;
 public class Card {
 
     /*this class is responsible of declaring the suits
@@ -47,12 +47,15 @@ public class Card {
         2 bigger or equal than 2 because if value is 2 it would return invalid
         2 is not bigger than 2, therefore it goes to the else statement
         */
+        // if(suit == 5){
+        //     if (value > 2){
+        //         return "invalid value";
+        //     }else{
+        //         return "\"" + value + "\"";
+        //     }
+        // }
         if(suit == 5){
-            if (value > 2){
-                return "invalid value";
-            }else{
-                return "\"" + value + "\"";
-            }
+            return "\"" + value + "\"";
         }
         
         switch (value){
@@ -72,7 +75,7 @@ public class Card {
     }
 
     public String toString(){
-        return "Your card is " + getValueAsString(value) + " of " + getSuitAsString(suit);
+        return getValueAsString(value) + " of " + getSuitAsString(suit);
     }
 
     // //main for testing
@@ -88,6 +91,8 @@ public class Card {
     //     Card myCard = new Card (suit, value);
 
     //     System.out.println(myCard.toString());
+
+    //     System.out.println(myCard.getSuitAsString(5));
     // }
     
 }

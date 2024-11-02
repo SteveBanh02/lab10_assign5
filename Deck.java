@@ -5,6 +5,7 @@ public class Deck {
 
     //constructor
     public Deck(){
+        //created a deck of cards object
         deck = new Card[54];
 
         //loop to create the deck of cards
