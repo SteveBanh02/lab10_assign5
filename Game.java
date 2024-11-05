@@ -8,6 +8,17 @@ public class Game {
         Deck cardDeck = new Deck();
 
         boolean win = false;
+
+        System.out.println(
+            """
+            Weclome to the card game of War!
+
+            The player has to satisfy one of the following conditions:
+                - The player must successfully guess the card that they picked
+                - If the player picks a joker, they automatically wins
+            The player has 5 rounds to win. 
+                    """
+        );
         
         for(int i = 0; i < 5; i++){
             cardDeck.shuffle();
