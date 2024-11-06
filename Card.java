@@ -3,11 +3,11 @@ public class Card {
 
     /*this class is responsible of declaring the suits
     and the value of the cards*/
-    private int suit;
-    private int value;
+    protected int suit;
+    protected int value;
 
     //Constructor
-    public Card(int suit, int value){
+    public Card(int value, int suit){
         this.suit = suit;
         this.value = value;
     }
@@ -33,8 +33,8 @@ public class Card {
                 return "Diamonds";
             case 4:
                 return "Clubs";
-            case 5:
-                return "Joker";
+            // case 5:
+            //     return "Joker";
             default:
                 return "Invalid suit";
         }
@@ -54,9 +54,9 @@ public class Card {
         //         return "\"" + value + "\"";
         //     }
         // }
-        if(suit == 5){
-            return "\"" + value + "\"";
-        }
+        // if(suit == 5){
+        //     return "\"" + value + "\"";
+        // }
         
         switch (value){
             case 1:
