@@ -1,7 +1,7 @@
 public class Joker extends Card{
 
-    public Joker(int value, int suit){
-        super(value, 5);
+    public Joker(int suit, int value){
+        super(5, value);
     }
 
     public String getSuitAsString(int suit){
@@ -9,17 +9,17 @@ public class Joker extends Card{
     }
 
     public String getValueAsString(int value){
-        return "\"" + super.getValue() + "\"";
+        return "\"" + value + "\"";
     }
 
-    public String toString(){
-        return getValueAsString(value) + " of " + getSuitAsString(suit);
-    }
+    // public String toString(){
+    //     return getValueAsString(value) + " of " + getSuitAsString(suit);
+    // }
 
     //main for testing
     // public static void main(String[] args) {
         
-    //     Joker myJoker = new Joker(suit, value);
+    //     Joker myJoker = new Joker(3, 1);
 
     //     System.out.println(myJoker.toString());
     // }

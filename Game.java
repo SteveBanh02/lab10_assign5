@@ -49,7 +49,7 @@ public class Game {
             }
         }
         if(!win){
-             System.out.println("You lost. Better luck next time!");
+             System.out.println("You lost the game.");
         }
     }
 }

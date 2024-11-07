@@ -1,13 +1,13 @@
-// import java.util.Scanner;
+//import java.util.Scanner;
 public class Card {
 
     /*this class is responsible of declaring the suits
     and the value of the cards*/
-    protected int suit;
-    protected int value;
+    private int suit;
+    private int value;
 
     //Constructor
-    public Card(int value, int suit){
+    public Card(int suit, int value){
         this.suit = suit;
         this.value = value;
     }
@@ -33,8 +33,6 @@ public class Card {
                 return "Diamonds";
             case 4:
                 return "Clubs";
-            // case 5:
-            //     return "Joker";
             default:
                 return "Invalid suit";
         }
@@ -42,22 +40,6 @@ public class Card {
 
     public String getValueAsString(int value){
 
-        /*check if value is bigger than 2 if it is, return invalid because
-        there are only 2 jokers in a deck of cards. here the logic is not
-        2 bigger or equal than 2 because if value is 2 it would return invalid
-        2 is not bigger than 2, therefore it goes to the else statement
-        */
-        // if(suit == 5){
-        //     if (value > 2){
-        //         return "invalid value";
-        //     }else{
-        //         return "\"" + value + "\"";
-        //     }
-        // }
-        // if(suit == 5){
-        //     return "\"" + value + "\"";
-        // }
-        
         switch (value){
             case 1:
                 return "Ace";
@@ -92,7 +74,7 @@ public class Card {
 
     //     System.out.println(myCard.toString());
 
-    //     System.out.println(myCard.getSuitAsString(5));
+    //     // System.out.println(myCard.getSuitAsString(5));
     // }
     
 }

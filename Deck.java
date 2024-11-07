@@ -17,8 +17,8 @@ public class Deck {
                 deck[position++] = myCard;
             }
             //hard code the cards 52 and 53 for jokers
-            deck[52] = new Joker(1,5);
-            deck[53] = new Joker(2,5);
+            deck[52] = new Joker(5,1);
+            deck[53] = new Joker(5,2);
         }
     }
 
