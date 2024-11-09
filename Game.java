@@ -21,7 +21,7 @@ public class Game {
         );
         
         for(int i = 0; i < 5; i++){
-            //cardDeck.shuffle();
+            cardDeck.shuffle();
 
             System.out.println("Please guess a card (except the joker cards), mentioning the value first, and then the suit.");
             String cardGuess = input.nextLine();

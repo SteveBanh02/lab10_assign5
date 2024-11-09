@@ -1,4 +1,4 @@
-//import java.util.Scanner;
+// import java.util.Scanner;
 public class Card {
 
     /*this class is responsible of declaring the suits
@@ -74,7 +74,8 @@ public class Card {
 
     //     System.out.println(myCard.toString());
 
-    //     // System.out.println(myCard.getSuitAsString(5));
+    //     System.out.println(myCard.getSuitAsString(4));
+    //     System.out.println(myCard.getValueAsString(5));
+
     // }
-    
 }

@@ -12,10 +12,6 @@ public class Joker extends Card{
         return "\"" + value + "\"";
     }
 
-    // public String toString(){
-    //     return getValueAsString(value) + " of " + getSuitAsString(suit);
-    // }
-
     //main for testing
     // public static void main(String[] args) {
         
