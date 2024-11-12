@@ -5,6 +5,7 @@ public class Deck {
     private int numCards;
 
     //constructors
+    //constructor without a parameter, default 
     public Deck(){
         //created a deck of cards object
         deck = new Card[54];
@@ -23,6 +24,7 @@ public class Deck {
         }
     }
 
+    //constructor with a parameter
     public Deck(int deckSize){
         deck = new Card[deckSize];
         numCards = 0;
@@ -45,16 +47,31 @@ public class Deck {
 
     //method for adding a card to the deck
     public void addToDeck(Card card){
-        
+        if(numCards < deck.length){
+            deck[numCards] = card;
+            numCards++;
+        }else{
+            System.out.println("Card deck is full.");
+        }
+    }
+
+    public static void printDeck(){
+        Deck myDeck = new Deck();
+
+        for(int i = 0; i < myDeck.deck.length; i++){
+            System.out.println(myDeck.deck[i]);
+        }
     }
 
 
     //main for testing
-    // public static void main(String[] args) {
-    //     Deck myDeck = new Deck();
+    public static void main(String[] args) {
 
-    //     for(int i = 0; i < myDeck.deck.length; i++){
-    //         System.out.println(myDeck.deck[i]);
-    //     }
-    // }
+        printDeck();
+    // //     Deck myDeck = new Deck();
+
+    // //     for(int i = 0; i < myDeck.deck.length; i++){
+    // //         System.out.println(myDeck.deck[i]);
+    // //     }
+    }
 }

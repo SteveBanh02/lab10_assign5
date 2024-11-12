@@ -19,9 +19,27 @@ public class Game {
             The player has 5 rounds to win. 
                     """
         );
+
+        System.out.println("please enter the name of player 1: ");
+        String player1 = input.nextLine();
+
+        System.out.println("please enter the name of player 2: ");
+        String player2 = input.nextLine();
+
+        //created 2 players based on the name given
+        Player firstPlayer = new Player(player1);
+        Player secondPlayer = new Player(player2);
+
+        // System.out.println("player 1 name is: " + firstPlayer.getName());
+        // System.out.println("player 2 name is: " + secondPlayer.getName());
+
+
+        for(int i = 0; i < 27; i++){
+            
+        }
         
         for(int i = 0; i < 5; i++){
-            cardDeck.shuffle();
+            //cardDeck.shuffle();
 
             System.out.println("Please guess a card (except the joker cards), mentioning the value first, and then the suit.");
             String cardGuess = input.nextLine();
