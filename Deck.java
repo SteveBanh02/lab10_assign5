@@ -2,8 +2,9 @@ public class Deck {
 
     //This class is for building our deck of cards
     private Card[] deck;
+    private int numCards;
 
-    //constructor
+    //constructors
     public Deck(){
         //created a deck of cards object
         deck = new Card[54];
@@ -22,6 +23,11 @@ public class Deck {
         }
     }
 
+    public Deck(int deckSize){
+        deck = new Card[deckSize];
+        numCards = 0;
+    }
+
     //methods
     public void shuffle(){
         for ( int i = deck.length-1; i > 0; i-- ) {
@@ -32,9 +38,16 @@ public class Deck {
         }
     }
 
+    //returns the position of the card
     public Card dealCard(int index){
         return deck[index];
     }
+
+    //method for adding a card to the deck
+    public void addToDeck(Card card){
+        
+    }
+
 
     //main for testing
     // public static void main(String[] args) {
