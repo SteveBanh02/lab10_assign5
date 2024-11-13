@@ -1,6 +1,6 @@
 public class Card {
 
-    /*this class is responsible of declaring the suits
+    /*this class is responsible for declaring the suits
     and the value of the cards*/
     private int suit;
     private int value;
@@ -60,6 +60,7 @@ public class Card {
     }
 }
 
+
 public class Joker extends Card{
 
     public Joker(int suit, int value){
@@ -74,6 +75,7 @@ public class Joker extends Card{
         return "\"" + value + "\"";
     }
 }
+
 
 public class Deck {
 
@@ -113,6 +115,7 @@ public class Deck {
         return deck[index];
     }
 }
+
 
 import java.util.Scanner;
 public class Game {

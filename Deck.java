@@ -55,23 +55,22 @@ public class Deck {
         }
     }
 
-    public static void printDeck(){
-        Deck myDeck = new Deck();
-
-        for(int i = 0; i < myDeck.deck.length; i++){
-            System.out.println(myDeck.deck[i]);
+    public void printDeck(){
+      
+        for(int i = 0; i < numCards; i++){
+            System.out.println(deck[i]);
         }
     }
 
 
     //main for testing
-    public static void main(String[] args) {
+    // public static void main(String[] args) {
 
-        printDeck();
-    // //     Deck myDeck = new Deck();
+    //printDeck();
+    //Deck myDeck = new Deck();
 
-    // //     for(int i = 0; i < myDeck.deck.length; i++){
-    // //         System.out.println(myDeck.deck[i]);
-    // //     }
-    }
+    //for(int i = 0; i < myDeck.deck.length; i++){
+    //System.out.println(myDeck.deck[i]);
+    //}
+    // }
 }
