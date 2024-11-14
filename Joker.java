@@ -5,12 +5,12 @@ public class Joker extends Card{
         super(5, value);
     }
 
-    //getters
-    public String getSuitAsString(int suit){
+    //methods
+    public String getSuitAsString(){
         return "Joker";
     }
 
-    public String getValueAsString(int value){
+    public String getValueAsString(){
         return "\"" + value + "\"";
     }
 

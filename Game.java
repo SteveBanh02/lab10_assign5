@@ -24,7 +24,7 @@ public class Game {
         System.out.println("please enter the name of player 2: ");
         String player2 = input.nextLine();
 
-        //created 2 players based on the name given
+        //created 2 players based on the given name
         Player firstPlayer = new Player(player1);
         Player secondPlayer = new Player(player2);
 
@@ -41,38 +41,38 @@ public class Game {
         System.out.println("\n" + secondPlayer.getName() + "'s Deck:\n");
         secondPlayer.getPlayerDeck().printDeck();
 
-        
-    //     boolean win = false;
-    //     for(int round = 0; round < 5; round++){
-    //         //cardDeck.shuffle();
+        // boolean win = false;
+        // for(int round = 0; round < 5; round++){
+        //     //cardDeck.shuffle();
 
-    //         System.out.println("Please guess a card (except the joker cards), mentioning the value first, and then the suit.");
-    //         String cardGuess = input.nextLine();
+        //     System.out.println("Please guess a card (except the joker cards), mentioning the value first, and then the suit.");
+        //     String cardGuess = input.nextLine();
 
-    //         System.out.println("Please pick a card from the deck. Enter a number between 0-53.");
-    //         int index = input.nextInt();
-    //         System.out.println("You have picked " + cardDeck.dealCard(index));
+        //     System.out.println("Please pick a card from the deck. Enter a number between 0-53.");
+        //     int index = input.nextInt();
+        //     System.out.println("You have picked " + cardDeck.dealCard(index));
 
-    //         input.nextLine();
+        //     input.nextLine();
 
-    //         String cardPicked = String.valueOf(cardDeck.dealCard(index));
+        //     String cardPicked = String.valueOf(cardDeck.dealCard(index));
+        //     System.out.println(cardPicked);
             
-    //         if(cardGuess.equalsIgnoreCase(cardPicked)){
-    //             System.out.println("Congradulation, you won! You picked your guessed card.");
-    //             win = true;
-    //             break;
-    //         }else if(cardPicked.equalsIgnoreCase("\"1\" of joker") || cardPicked.equalsIgnoreCase("\"2\" of joker")){
-    //             System.out.println("Congradulation, you won! You picked a joker card.");
-    //             win = true;
-    //             break;
-    //         }else{
-    //             if(round < 4){
-    //                 System.out.println("Try again");
-    //             }
-    //         }
-    //     }
-    //     if(!win){
-    //          System.out.println("You lost the game.");
-    //     }
+        //     if(cardGuess.equalsIgnoreCase(cardPicked)){
+        //         System.out.println("Congradulation, you won! You picked your guessed card.");
+        //         win = true;
+        //         break;
+        //     }else if(cardPicked.equalsIgnoreCase("\"1\" of joker") || cardPicked.equalsIgnoreCase("\"2\" of joker")){
+        //         System.out.println("Congradulation, you won! You picked a joker card.");
+        //         win = true;
+        //         break;
+        //     }else{
+        //         if(round < 4){
+        //             System.out.println("Try again");
+        //         }
+        //     }
+        // }
+        // if(!win){
+        //      System.out.println("You lost the game.");
+        // }
     }
 }

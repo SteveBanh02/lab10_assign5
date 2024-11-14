@@ -3,8 +3,8 @@ public class Card {
 
     /*this class is responsible of declaring the suits
     and the value of the cards*/
-    private int suit;
-    private int value;
+    protected int suit;
+    protected int value;
 
     //Constructor
     public Card(int suit, int value){
@@ -22,7 +22,7 @@ public class Card {
     }
 
     //methods
-    public String getSuitAsString(int suit){
+    public String getSuitAsString(){
 
         switch (suit){
             case 1:
@@ -38,7 +38,7 @@ public class Card {
         }
     }
 
-    public String getValueAsString(int value){
+    public String getValueAsString(){
 
         switch (value){
             case 1:
@@ -57,7 +57,7 @@ public class Card {
     }
 
     public String toString(){
-        return getValueAsString(value) + " of " + getSuitAsString(suit);
+        return getValueAsString() + " of " + getSuitAsString();
     }
 
     // //main for testing

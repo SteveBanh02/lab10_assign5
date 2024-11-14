@@ -1,3 +1,4 @@
+
 public class Deck {
 
     //This class is for building our deck of cards
@@ -40,7 +41,7 @@ public class Deck {
         }
     }
 
-    //returns the position of the card
+    //returns the card that is at the specified position
     public Card dealCard(int index){
         return deck[index];
     }
