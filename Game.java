@@ -29,16 +29,18 @@ public class Game {
         Player secondPlayer = new Player(player2);
 
         //loop for splitting the deck into 2 and giving it to player 1 and 2
-        for(int splitCard = 0; splitCard < 27; splitCard++){
+        for(int numberCard = 0; numberCard < 27; numberCard++){
 
-            firstPlayer.getPlayerDeck().addToDeck(cardDeck.dealCard(splitCard*2));
-            secondPlayer.getPlayerDeck().addToDeck(cardDeck.dealCard(splitCard*2 + 1));           
+            //putting odd number cards into player 1 deck
+            firstPlayer.getPlayerDeck().addToDeck(cardDeck.dealCard(numberCard*2));
+            //putting even number cards into player 2 deck
+            secondPlayer.getPlayerDeck().addToDeck(cardDeck.dealCard(numberCard*2 + 1));           
         }
 
-        System.out.println("\n" + firstPlayer.getName() + "'s Deck:\n");
+        System.out.println("\n" + firstPlayer.getName() + " has:\n");
         firstPlayer.getPlayerDeck().printDeck();
 
-        System.out.println("\n" + secondPlayer.getName() + "'s Deck:\n");
+        System.out.println("\n" + secondPlayer.getName() + " has:\n");
         secondPlayer.getPlayerDeck().printDeck();
 
         // boolean win = false;
