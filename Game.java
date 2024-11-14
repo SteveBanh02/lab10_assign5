@@ -5,9 +5,6 @@ public class Game {
         
         Scanner input = new Scanner(System.in);
 
-        Deck cardDeck = new Deck();
-
-        boolean win = false;
         System.out.println(
             """
             Weclome to the card game of War!
@@ -18,6 +15,8 @@ public class Game {
             The player has 5 rounds to win. 
                     """
         );
+        
+        Deck cardDeck = new Deck();
 
         System.out.println("please enter the name of player 1: ");
         String player1 = input.nextLine();
@@ -29,45 +28,51 @@ public class Game {
         Player firstPlayer = new Player(player1);
         Player secondPlayer = new Player(player2);
 
-        // System.out.println("player 1 name is: " + firstPlayer.getName());
-        // System.out.println("player 2 name is: " + secondPlayer.getName());
+        //loop for splitting the deck into 2 and giving it to player 1 and 2
+        for(int splitCard = 0; splitCard < 27; splitCard++){
 
-
-        for(int i = 0; i < 27; i++){
-
-           
+            firstPlayer.getPlayerDeck().addToDeck(cardDeck.dealCard(splitCard*2));
+            secondPlayer.getPlayerDeck().addToDeck(cardDeck.dealCard(splitCard*2 + 1));           
         }
+
+        System.out.println("\n" + firstPlayer.getName() + "'s Deck:\n");
+        firstPlayer.getPlayerDeck().printDeck();
+
+        System.out.println("\n" + secondPlayer.getName() + "'s Deck:\n");
+        secondPlayer.getPlayerDeck().printDeck();
+
         
-        // for(int i = 0; i < 5; i++){
-        //     //cardDeck.shuffle();
+    //     boolean win = false;
+    //     for(int round = 0; round < 5; round++){
+    //         //cardDeck.shuffle();
 
-        //     System.out.println("Please guess a card (except the joker cards), mentioning the value first, and then the suit.");
-        //     String cardGuess = input.nextLine();
+    //         System.out.println("Please guess a card (except the joker cards), mentioning the value first, and then the suit.");
+    //         String cardGuess = input.nextLine();
 
-        //     System.out.println("Please pick a card from the deck. Enter a number between 0-53.");
-        //     int pickCard = input.nextInt();
-        //     System.out.println("You have picked " + cardDeck.dealCard(pickCard));
+    //         System.out.println("Please pick a card from the deck. Enter a number between 0-53.");
+    //         int index = input.nextInt();
+    //         System.out.println("You have picked " + cardDeck.dealCard(index));
 
-        //     input.nextLine();
+    //         input.nextLine();
 
-        //     String cardPicked = String.valueOf(cardDeck.dealCard(pickCard));
+    //         String cardPicked = String.valueOf(cardDeck.dealCard(index));
             
-        //     if(cardGuess.equalsIgnoreCase(cardPicked)){
-        //         System.out.println("Congradulation, you won! You picked your guessed card.");
-        //         win = true;
-        //         break;
-        //     }else if(cardPicked.equalsIgnoreCase("\"1\" of joker") || cardPicked.equalsIgnoreCase("\"2\" of joker")){
-        //         System.out.println("Congradulation, you won! You picked a joker card.");
-        //         win = true;
-        //         break;
-        //     }else{
-        //         if(i < 4){
-        //             System.out.println("Try again");
-        //         }
-        //     }
-        // }
-        // if(!win){
-        //      System.out.println("You lost the game.");
-        // }
+    //         if(cardGuess.equalsIgnoreCase(cardPicked)){
+    //             System.out.println("Congradulation, you won! You picked your guessed card.");
+    //             win = true;
+    //             break;
+    //         }else if(cardPicked.equalsIgnoreCase("\"1\" of joker") || cardPicked.equalsIgnoreCase("\"2\" of joker")){
+    //             System.out.println("Congradulation, you won! You picked a joker card.");
+    //             win = true;
+    //             break;
+    //         }else{
+    //             if(round < 4){
+    //                 System.out.println("Try again");
+    //             }
+    //         }
+    //     }
+    //     if(!win){
+    //          System.out.println("You lost the game.");
+    //     }
     }
 }

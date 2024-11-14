@@ -55,8 +55,8 @@ public class Deck {
         }
     }
 
+    //method for print the deck after it's been separated
     public void printDeck(){
-      
         for(int i = 0; i < numCards; i++){
             System.out.println(deck[i]);
         }
