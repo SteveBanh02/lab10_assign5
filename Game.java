@@ -24,17 +24,17 @@ public class Game {
         System.out.println("please enter the name of player 2: ");
         String player2 = input.nextLine();
 
-        //created 2 players based on the given name
+        //created 2 players based on the given name (part 1)
         Player firstPlayer = new Player(player1);
         Player secondPlayer = new Player(player2);
 
-        //loop for splitting the deck into 2 and giving it to player 1 and 2
-        for(int numberCard = 0; numberCard < 27; numberCard++){
+        //loop for splitting the deck into 2 and giving it to player 1 and 2 (part 1)
+        for(int i = 0; i < 27; i++){
 
             //putting odd number cards into player 1 deck
-            firstPlayer.getPlayerDeck().addToDeck(cardDeck.dealCard(numberCard*2));
+            firstPlayer.getPlayerDeck().addToDeck(cardDeck.dealCard(i*2));
             //putting even number cards into player 2 deck
-            secondPlayer.getPlayerDeck().addToDeck(cardDeck.dealCard(numberCard*2 + 1));           
+            secondPlayer.getPlayerDeck().addToDeck(cardDeck.dealCard(i*2 + 1));           
         }
 
         System.out.println("\n" + firstPlayer.getName() + " has:\n");
@@ -42,6 +42,11 @@ public class Game {
 
         System.out.println("\n" + secondPlayer.getName() + " has:\n");
         secondPlayer.getPlayerDeck().printDeck();
+        
+        while(secondPlayer.getPlayerDeck().dealCard() != null){
+            
+        }
+
 
         // boolean win = false;
         // for(int round = 0; round < 5; round++){

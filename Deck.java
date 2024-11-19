@@ -1,9 +1,8 @@
-
 public class Deck {
 
     //This class is for building our deck of cards
     private Card[] deck;
-    private int numCards;
+    private int numCards; //(part 1)
 
     //constructors
     //constructor without a parameter, default 
@@ -23,9 +22,10 @@ public class Deck {
             deck[52] = new Joker(5,1);
             deck[53] = new Joker(5,2);
         }
+        numCards = 54;
     }
 
-    //constructor with a parameter
+    //constructor with a parameter (part 1)
     public Deck(int deckSize){
         deck = new Card[deckSize];
         numCards = 0;
@@ -46,7 +46,17 @@ public class Deck {
         return deck[index];
     }
 
-    //method for adding a card to the deck
+    //another dealCard (part 2)
+    public Card dealCard(){
+
+        if(numCards == 0){
+            System.out.println("empty deck");
+            return null;
+        }
+        return deck[--numCards];
+    }
+
+    //method for adding a card to the deck (part 1)
     public void addToDeck(Card card){
         if(numCards < deck.length){
             deck[numCards] = card;
@@ -56,8 +66,12 @@ public class Deck {
         }
     }
 
-    //method for printing the deck after it's been separated
+    //method for printing the deck after it's been separated (part 1)
     public void printDeck(){
+        //this is for part 2
+         if(numCards == 0){
+            System.out.println("empty deck");
+        }
         for(int i = 0; i < numCards; i++){
             System.out.println(deck[i]);
         }
