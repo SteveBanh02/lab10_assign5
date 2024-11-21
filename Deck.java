@@ -46,12 +46,13 @@ public class Deck {
         return deck[index];
     }
 
+    //return the card starting from the bottom (part 2)
     public Card dealCard(){
 
         if(numCards > 0){
             return deck[--numCards];
         }else{
-            System.out.println("empty deck");
+            // System.out.println("empty deck");
             return null;
         }
     }
@@ -69,12 +70,12 @@ public class Deck {
     //method for printing the deck after it's been separated (part 1)
     public void printDeck(){
         
-        if(numCards > 0){
+        if(numCards == 0){
+            System.out.println("empty deck");//part 2
+        }else{
             for(int i = 0; i < numCards; i++){
                 System.out.println(deck[i]);
             }
-        }else{
-            System.out.println("empty deck");
         }
     }
 

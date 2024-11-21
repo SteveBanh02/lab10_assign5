@@ -43,36 +43,34 @@ public class Game {
         System.out.println("\n" + secondPlayer.getName() + " has:\n");
         secondPlayer.getPlayerDeck().printDeck();
 
-        System.out.println("\nTransferring all cards from " + firstPlayer.getName() + " to " + secondPlayer.getName() + "...\n");
-
-        // first loop to transfer all player1 cards to player2
-        Card card; // Temporary variable to hold the dealt card for comparing 1 card at a time
+        //first loop to transfer all player1 cards to player2 (part 2)
+        Card card; //Temporary variable to hold the dealt card for comparing 1 card at a time (part 2)
         while ((card = firstPlayer.getPlayerDeck().dealCard()) != null) {
             secondPlayer.getPlayerDeck().addToDeck(card);
         }
-        // Print both players' decks after the first transfer
-        System.out.println("\nAfter transfer:");
+        //Print both players' decks after the first transfer (part 2)
+        System.out.println("\nAfter moving " + firstPlayer.getName() + "'s deck to " + secondPlayer.getName() + "'s deck");
 
-        //player1 deck should be empty
+        //player1 deck should be empty(part 2)
         System.out.println("\n" + firstPlayer.getName() + " has:\n");
         firstPlayer.getPlayerDeck().printDeck();
 
-        //player2 should have all 54 cards
+        //player2 should have all 54 cards (part 2)
         System.out.println("\n" + secondPlayer.getName() + " has:\n");
         secondPlayer.getPlayerDeck().printDeck();
 
-        // second loop to transfer all player 2 cards to player1
+        //second loop to transfer all player 2 cards to player1 (part 2)
         while ((card = secondPlayer.getPlayerDeck().dealCard()) != null){
             firstPlayer.getPlayerDeck().addToDeck(card);
         }
-        // Print both players' decks after the second transfer
-        System.out.println("\nAfter transfer:");
+        //Print both players' decks after the second transfer (part 2)
+        System.out.println("\nAfter moving " + secondPlayer.getName() + "'s deck to " + firstPlayer.getName() + "'s deck");
 
-        //player1 deck should have all 54 cards
+        //player1 deck should have all 54 cards (part 2)
         System.out.println("\n" + firstPlayer.getName() + " has:\n");
         firstPlayer.getPlayerDeck().printDeck();
 
-        //player 2 deck should be empty
+        //player 2 deck should be empty (part 2)
         System.out.println("\n" + secondPlayer.getName() + " has:\n");
         secondPlayer.getPlayerDeck().printDeck();
 
