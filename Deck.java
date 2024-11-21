@@ -9,6 +9,7 @@ public class Deck {
     public Deck(){
         //created a deck of cards object
         deck = new Card[54];
+        numCards = 54; //initialize 54 cards (part 2)
 
         //loop to create the deck of cards
         int position = 0; 
@@ -22,7 +23,6 @@ public class Deck {
             deck[52] = new Joker(5,1);
             deck[53] = new Joker(5,2);
         }
-        numCards = 54;
     }
 
     //constructor with a parameter (part 1)
@@ -46,14 +46,14 @@ public class Deck {
         return deck[index];
     }
 
-    //another dealCard (part 2)
     public Card dealCard(){
 
-        if(numCards == 0){
+        if(numCards > 0){
+            return deck[--numCards];
+        }else{
             System.out.println("empty deck");
             return null;
         }
-        return deck[--numCards];
     }
 
     //method for adding a card to the deck (part 1)
@@ -68,12 +68,13 @@ public class Deck {
 
     //method for printing the deck after it's been separated (part 1)
     public void printDeck(){
-        //this is for part 2
-         if(numCards == 0){
+        
+        if(numCards > 0){
+            for(int i = 0; i < numCards; i++){
+                System.out.println(deck[i]);
+            }
+        }else{
             System.out.println("empty deck");
-        }
-        for(int i = 0; i < numCards; i++){
-            System.out.println(deck[i]);
         }
     }
 

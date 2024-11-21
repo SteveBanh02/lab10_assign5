@@ -42,11 +42,39 @@ public class Game {
 
         System.out.println("\n" + secondPlayer.getName() + " has:\n");
         secondPlayer.getPlayerDeck().printDeck();
-        
-        while(secondPlayer.getPlayerDeck().dealCard() != null){
-            
-        }
 
+        System.out.println("\nTransferring all cards from " + firstPlayer.getName() + " to " + secondPlayer.getName() + "...\n");
+
+        // first loop to transfer all player1 cards to player2
+        Card card; // Temporary variable to hold the dealt card for comparing 1 card at a time
+        while ((card = firstPlayer.getPlayerDeck().dealCard()) != null) {
+            secondPlayer.getPlayerDeck().addToDeck(card);
+        }
+        // Print both players' decks after the first transfer
+        System.out.println("\nAfter transfer:");
+
+        //player1 deck should be empty
+        System.out.println("\n" + firstPlayer.getName() + " has:\n");
+        firstPlayer.getPlayerDeck().printDeck();
+
+        //player2 should have all 54 cards
+        System.out.println("\n" + secondPlayer.getName() + " has:\n");
+        secondPlayer.getPlayerDeck().printDeck();
+
+        // second loop to transfer all player 2 cards to player1
+        while ((card = secondPlayer.getPlayerDeck().dealCard()) != null){
+            firstPlayer.getPlayerDeck().addToDeck(card);
+        }
+        // Print both players' decks after the second transfer
+        System.out.println("\nAfter transfer:");
+
+        //player1 deck should have all 54 cards
+        System.out.println("\n" + firstPlayer.getName() + " has:\n");
+        firstPlayer.getPlayerDeck().printDeck();
+
+        //player 2 deck should be empty
+        System.out.println("\n" + secondPlayer.getName() + " has:\n");
+        secondPlayer.getPlayerDeck().printDeck();
 
         // boolean win = false;
         // for(int round = 0; round < 5; round++){
